@@ -1,1 +1,5 @@
 junk/
+exe
+*.pdf
+*.txt
+*.ipynb
