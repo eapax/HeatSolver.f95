@@ -18,7 +18,18 @@ Resolution Δt = 1800 s, Δz = 1 m.
 
 # Usage
 
-A simple usage example coming soon...
+The integration is contained in one program called `HeatSolve.f95` so (using gfortran as compiler, for example) do
+
+```
+> gfortran -o exe HeatSolve.f90
+```
+to compile, and then
+
+```
+> ./exe > output.txt &
+```
+
+to run and print the output to a file called `output.txt`. The output is a temperature array stored as text.  
 
 # References
 
