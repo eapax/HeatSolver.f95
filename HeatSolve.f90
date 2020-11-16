@@ -15,7 +15,7 @@ program heat_solver
 	real(8), parameter :: xi = dt * D * dz**(-2)
 	
 	!Initialize array for temperature
-	integer, parameter :: m = H / dz
+	integer, parameter :: m = H / dz + 1
 	integer, parameter :: n = (t_stop - t_start) / dt
 	integer :: i, j
 	real(8), dimension(m, n) :: T					!Temperature
