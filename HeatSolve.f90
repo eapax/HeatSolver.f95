@@ -8,7 +8,7 @@ program heat_solver
 	!Declare Variables
 	real(8), parameter :: D = 7 * 10**(-7)				!Diffusivity (m2s-1) 
 	real(8), parameter :: t_start = 0					!Start time (s)
-	real(8), parameter :: t_stop = 50*365*24*60*60			!Stop time (s)
+	real(8), parameter :: t_stop = 60*365*24*60*60			!Stop time (s)
 	real(8), parameter :: H = 60					!Column height (m)
 	real(8), parameter :: dt = 1800 					!Time step (s)
 	real(8), parameter :: dz = 1					!Space step (m)
