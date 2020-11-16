@@ -33,4 +33,4 @@ to run and print the output to a file called `output.txt`. The output is a tempe
 
 # References
 
-[1] Dawson et. al - *Reliable low precision simulations in land surface models* (Climate Dynamics 51:2657–2666, 2018)
+[1] Dawson et al. - *Reliable low precision simulations in land surface models* (Climate Dynamics 51:2657–2666, 2018)
