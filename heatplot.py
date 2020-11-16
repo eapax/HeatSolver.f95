@@ -1,9 +1,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
+
+loadfile = str(sys.argv[1])
+savefile = str(sys.argv[2])
 
 #load data
-filename = "output.txt"
-T = np.loadtxt(filename)
+T = np.loadtxt(loadfile)
 
 def forceAspect(ax,aspect=1):
     im = ax.get_images()
@@ -26,4 +29,4 @@ ax.set_title("Temperature (Kelvin)")
 plt.colorbar(heatmap)
 
 #save plot
-plt.savefig("heatplot.pdf", bbox_inches="tight")
+plt.savefig(savefile, bbox_inches="tight")
