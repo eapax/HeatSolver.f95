@@ -19,17 +19,20 @@ Resolution Δt = 1800 s, Δz = 1 m.
 # Usage
 
 The integration is contained in one program called `HeatSolve.f95` so (using gfortran as compiler, for example) do
-
 ```
 > gfortran -o exe HeatSolve.f90
 ```
 to compile, and then
-
 ```
-> ./exe > output.txt &
+> ./exe > output.txt
 ```
+to run and print the output to a file called `output.txt`. The output is a temperature array stored as text.
 
-to run and print the output to a file called `output.txt`. The output is a temperature array stored as text.  
+If you like, you can make a heat-plot of the array using the provided python script `heatplot.py`. Just do
+```
+> python heatplot.py output.txt heatplot.pdf
+```
+to plot the array `output.txt` and save as a pdf `heatplot.pdf`.
 
 # References
 
