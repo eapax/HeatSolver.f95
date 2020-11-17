@@ -5,29 +5,30 @@ program heat_solver
 
 	implicit none
 
-	!Declare Variables
-	real, parameter :: D = 7 * 10**(-7)				!Diffusivity (m2s-1) 
-	real, parameter :: t_start = 0					!Start time (s)
-	real, parameter :: t_stop = 60*365*24*60*60			!Stop time (s)
-	real, parameter :: H = 60					!Column height (m)
-	real, parameter :: dt = 1800 					!Time step (s)
-	real, parameter :: dz = 1					!Space step (m)
-	real, parameter :: xi = dt * D * dz**(-2)
+        !Declare Variables
+        integer, parameter :: rk = 4
+	real(kind=rk), parameter :: D = 7 * 10d0**(-7)				!Diffusivity (m2s-1) 
+	real(kind=rk), parameter :: t_start = 0					!Start time (s)
+	real(kind=rk), parameter :: t_stop = 60*365*24*60*60			!Stop time (s)
+	real(kind=rk), parameter :: H = 60d0					!Column height (m)
+	real(kind=rk), parameter :: dt = 1800d0 				!Time step (s)
+	real(kind=rk), parameter :: dz = 1d0					!Space step (m)
+	real(kind=rk), parameter :: xi = dt * D * dz**(-2)
 	
 	!Initialize array for temperature
 	integer, parameter :: m = H / dz + 1
 	integer, parameter :: n = (t_stop - t_start) / dt
 	integer :: i, j
-	real, dimension(m, n) :: T					!Temperature
+        real(kind=rk), dimension(m, n) :: T					!Temperature
 
 	!Set initial condition
 	do i = 1, m
-		T(i,1) = 273.15
+		T(i,1) = 273.15d0
 	end do
 	
 	!Set soil-top boundary condition
 	do j = 1, n 
-		T(1,j) = 280.0
+		T(1,j) = 280.0d0
 	end do
      
 	!Integrate 
